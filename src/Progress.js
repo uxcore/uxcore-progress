@@ -31,13 +31,13 @@ class Line extends React.Component {
             if (props.status === 'exception') {
                 progressInfo = (
                     <span className={`${prefixCls}-line-text`}>
-                        <i className="anticon anticon-exclamation-circle"></i>
+                        <i className="kuma-icon kuma-icon-caution"></i>
                     </span>
                 );
             } else if (props.status === 'success') {
                 progressInfo = (
                     <span className={`${prefixCls}-line-text`}>
-                        <i className="anticon anticon-check-circle"></i>
+                        <i className="kuma-icon kuma-icon-success"></i>
                     </span>
                 );
             } else {

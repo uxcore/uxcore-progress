@@ -41,7 +41,7 @@
   font-size: 1em;
   margin-left: 10px;
 }
-.kuma-progress-line-text .anticon {
+.kuma-progress-line-text .kuma-icon {
   font-size: 12px;
 }
 .kuma-progress-line-wrap.status-active .kuma-progress-line-bg:before {
