@@ -1,0 +1,82 @@
+/**
+ * Progress Component Style for uxcore
+ * @author vicent.bian
+ *
+ * Copyright 2014-2015, Uxcore Team, Alinw.
+ * All rights reserved.
+ */
+.kuma-progress-line-wrap,
+.kuma-progress-circle-wrap {
+  display: inline-block;
+}
+.kuma-progress-line-wrap {
+  width: 100%;
+  font-size: 12px;
+  position: relative;
+}
+.kuma-progress-line-outer {
+  margin-right: 45px;
+}
+.kuma-progress-line-wrap-full .kuma-progress-line-outer {
+  margin-right: 0;
+}
+.kuma-progress-line-inner {
+  display: inline-block;
+  width: 100%;
+  background-color: #E9E9E9;
+  border-radius: 100px;
+}
+.kuma-progress-line-bg {
+  border-radius: 100px;
+  background-color: #ff9900;
+  transition: all 0.3s linear 0s;
+  position: relative;
+}
+.kuma-progress-line-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35px;
+  text-align: left;
+  font-size: 1em;
+  margin-left: 10px;
+}
+.kuma-progress-line-text .anticon {
+  font-size: 12px;
+}
+.kuma-progress-line-wrap.status-active .kuma-progress-line-bg:before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 10px;
+  animation: progress-active 2s ease infinite;
+}
+.kuma-progress-line-wrap.status-exception .kuma-progress-line-bg {
+  background-color: #ed6f5e;
+}
+.kuma-progress-line-wrap.status-exception .kuma-progress-line-text {
+  color: #ed6f5e;
+}
+.kuma-progress-line-wrap.status-success .kuma-progress-line-bg {
+  background-color: #95ed5e;
+}
+.kuma-progress-line-wrap.status-success .kuma-progress-line-text {
+  color: #95ed5e;
+}
+@keyframes progress-active {
+  0% {
+    opacity: .3;
+    width: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=Progress.css.map */
