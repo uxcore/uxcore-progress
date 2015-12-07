@@ -9,17 +9,16 @@
  @progress-prefix-cls: kuma-progress;
 
  .@{progress-prefix-cls} {
-    &-line-wrap,
-    &-circle-wrap {
-        display: inline-block;
-    }
     &-line-wrap {
+        display: inline-block;
+        vertical-align: middle;
         width: 100%;
         font-size: 12px;
         position: relative;
     }
     &-line-outer {
         margin-right: 45px;
+        height: 22px;
     }
     &-line-wrap-full {
         .@{progress-prefix-cls}-line-outer {
@@ -31,6 +30,7 @@
         width: 100%;
         background-color: #E9E9E9;
         border-radius: 100px;
+        vertical-align: middle;
     }
     &-line-bg {
         border-radius: 100px;
@@ -46,9 +46,14 @@
         text-align: left;
         font-size: 1em;
         margin-left: 10px;
-
-        .kuma-icon {
-            font-size: 12px;
+        height: 22px;
+        
+        > i {
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: .2px;
+            font-family: @progress-icon-font-family;
         }
     }
     &-line-wrap.status-active {
@@ -73,6 +78,11 @@
         }
         .@{progress-prefix-cls}-line-text {
             color: @brand-danger;
+            .icon-caution {
+                &:after {
+                   content: @progress-icon-caution-content;
+                }
+            }
         }
     }
     &-line-wrap.status-success {
@@ -81,6 +91,11 @@
         }
         .@{progress-prefix-cls}-line-text {
             color: @brand-success;
+            .icon-success {
+                &:after {
+                    content: @progress-icon-success-content;
+                }
+            }
         }
     }
 }

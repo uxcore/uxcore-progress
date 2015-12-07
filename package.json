@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "uxcore-progress component for uxcore.",
   "repository": "https://github.com/uxcore/uxcore-progress.git",
-  "author": "vicent.bian",
+  "author": "vincent.bian",
   "main": "src/index.js",
   "scripts": {
     "dev": "gulp server"
