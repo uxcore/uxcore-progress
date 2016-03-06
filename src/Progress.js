@@ -6,6 +6,7 @@
  * All rights reserved.
  */
 import React from 'react';
+import ReactDOM from 'react-dom';
 import assign from 'object-assign';
 
 const prefixCls = 'kuma-progress';
