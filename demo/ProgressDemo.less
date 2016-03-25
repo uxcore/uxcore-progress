@@ -9,5 +9,14 @@
 @progress-icon-caution-content: '\e605';
 @progress-icon-success-content: '\e601';
 
-@import "../node_modules/uxcore-kuma/src/variables";
-@import "../src/Progress.less";
+html {
+    box-sizing: border-box;
+    * {
+        box-sizing: inherit;
+    }
+}
+
+// @import "../node_modules/uxcore-kuma/src/variables";
+@import '../style/kuma-base/variable.less';
+@import '../style/kuma-base/core.less';
+@import '../src/Progress.less';

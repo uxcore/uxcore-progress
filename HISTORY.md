@@ -1,5 +1,8 @@
 # History
 
+## 1.1.0
+`CHANGED` 1. apply new style 2. add circle progress
+
 ## 1.0.3
 `CHANGED` update scaffold
 

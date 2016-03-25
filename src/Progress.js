@@ -22,7 +22,7 @@ class Line extends React.Component {
         let progressInfo;
         let fullCls = '';
 
-        if(props.showInfo === true){
+        if (props.showInfo === true){
             if (props.status === 'exception') {
                 progressInfo = (
                     <span className={`${prefixCls}-line-text`}>
@@ -63,7 +63,7 @@ class Line extends React.Component {
 }
 Line.displayName = "Progress-Line";
 Line.propTypes = {
-    status: React.PropTypes.oneOf(['normal', 'exception', 'active', 'success']),
+    status: React.PropTypes.oneOf(['normal', 'exception', 'success']),
     showInfo: React.PropTypes.bool,
     percent: React.PropTypes.number,
     strokeWidth: React.PropTypes.number

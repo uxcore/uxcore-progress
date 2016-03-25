@@ -6,9 +6,9 @@
  * All rights reserved.
  */
 
- @progress-prefix-cls: kuma-progress;
+ @__progress-prefix-cls: kuma-progress;
 
- .@{progress-prefix-cls} {
+ .@{__progress-prefix-cls} {
     &-line-wrap {
         display: inline-block;
         vertical-align: middle;
@@ -22,20 +22,20 @@
         line-height: 22px;
     }
     &-line-wrap-full {
-        .@{progress-prefix-cls}-line-outer {
+        .@{__progress-prefix-cls}-line-outer {
             margin-right: 0;
         }
     }
     &-line-inner {
         display: inline-block;
         width: 100%;
-        background-color: #E9E9E9;
+        background-color: @basic-700;
         border-radius: 100px;
         vertical-align: middle;
     }
     &-line-bg {
         border-radius: 100px;
-        background-color: @brand-primary;
+        background-color: @brand-info;
         transition: all 0.3s linear 0s;
         position: relative;
     }
@@ -58,27 +58,11 @@
             font-family: @progress-icon-font-family;
         }
     }
-    &-line-wrap.status-active {
-        .@{progress-prefix-cls}-line-bg {
-            &:before {
-                content: "";
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: #fff;
-                border-radius: 10px;
-                animation: progress-active 2s ease infinite;
-            }
-        }
-    }
     &-line-wrap.status-exception {
-        .@{progress-prefix-cls}-line-bg {
+        .@{__progress-prefix-cls}-line-bg {
             background-color: @brand-danger;
         }
-        .@{progress-prefix-cls}-line-text {
+        .@{__progress-prefix-cls}-line-text {
             color: @brand-danger;
             .icon-caution {
                 &:after {
@@ -88,16 +72,46 @@
         }
     }
     &-line-wrap.status-success {
-        .@{progress-prefix-cls}-line-bg {
+        .@{__progress-prefix-cls}-line-bg {
             background-color: @brand-success;
         }
-        .@{progress-prefix-cls}-line-text {
+        .@{__progress-prefix-cls}-line-text {
             color: @brand-success;
             .icon-success {
                 &:after {
                     content: @progress-icon-success-content;
                 }
             }
+        }
+    }
+    
+    &-circle-trail {
+        stroke: @basic-700;
+    }
+    
+    &-circle-wrap.status-normal {
+        .@{__progress-prefix-cls}-circle-path {
+            stroke: @brand-info;
+        }
+    }
+    &-circle-wrap.status-exception {
+        .@{__progress-prefix-cls}-circle-path {
+            stroke: @brand-danger;
+        }
+    }
+    &-circle-wrap.status-success {
+        .@{__progress-prefix-cls}-circle-path {
+            stroke: @brand-success;
+        }
+    }
+    &-circle-wrap {
+        position: relative;
+        .@{__progress-prefix-cls}-circle-text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            text-align: center;
         }
     }
 }

@@ -6,9 +6,8 @@
  * All rights reserved.
  */
 
-let classnames = require('classnames');
-
-let Progress = require('../src');
+import classnames from 'classnames';
+import {Line, Circle} from '../src';
 
 class Demo extends React.Component {
 
@@ -39,22 +38,25 @@ class Demo extends React.Component {
             <div>
                 <div>
                     <p>标准的进度条</p>
-                    <Progress percent={30} />
-                    <Progress percent={50} status="active" />
-                    <Progress percent={70} status="exception" />
-                    <Progress percent={100} />
-                    <Progress percent={50} showInfo={false} />
+                    <Line percent={30} />
+                    <Line percent={70} status="exception" />
+                    <Line percent={100} />
+                    <Line percent={50} showInfo={false} />
+                    <Circle percent={30} />
+                    <Circle percent={70} status="exception" />
+                    <Circle percent={100} status="success" />
+                    <Circle percent={50} showInfo={false} />
                 </div>
                 <div style={{ width: 170 }}>
                     <p>适合放在较狭窄的区域内。</p>
-                    <Progress percent={30} strokeWidth={5} />
-                    <Progress percent={50} strokeWidth={5} status="active" />
-                    <Progress percent={70} strokeWidth={5} status="exception" />
-                    <Progress percent={100} strokeWidth={5} />
+                    <Line percent={30} strokeWidth={5} />
+                    <Line percent={70} strokeWidth={5} status="exception" />
+                    <Line percent={100} strokeWidth={5} />
                 </div>
                 <div>
                     <p>动态展示。</p>
-                    <Progress percent={this.state.percent} />
+                    <Line percent={this.state.percent} />
+                    <Circle percent={this.state.percent} />
                     <button className="kuma-button kuma-button-secondary kuma-button-sm" onClick={this.decline.bind(this)}>
                         <i className="kuma-icon kuma-icon-stop"></i>
                     </button>
