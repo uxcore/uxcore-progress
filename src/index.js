@@ -6,7 +6,8 @@
  * All rights reserved.
  */
 
-module.exports = {
-    Line: require('./Progress'),
-    Circle: require('./Circle')
-}
+let Progress = require('./Progress');
+Progress.Line = Progress;
+Progress.Circle = require('./Circle');
+
+module.exports = Progress;
