@@ -5,9 +5,16 @@
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
+ html {
+  box-sizing: border-box;
+  * {
+    box-sizing: inherit;
+  }
+}
 @progress-icon-font-family: 'kuma';
 @progress-icon-caution-content: '\e605';
 @progress-icon-success-content: '\e601';
 
-@import "../node_modules/uxcore-kuma/src/variables";
+@import "../node_modules/kuma-base/theme/orange";
+@import "../node_modules/kuma-base/core";
 @import "../src/Progress.less";

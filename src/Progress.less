@@ -9,106 +9,103 @@
  @progress-prefix-cls: kuma-progress;
 
  .@{progress-prefix-cls} {
-    &-line-wrap {
-        display: inline-block;
-        vertical-align: middle;
-        width: 100%;
-        font-size: 12px;
-        position: relative;
+  &-line-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 12px;
+    position: relative;
+  }
+  &-line-outer {
+    margin-right: 45px;
+    height: 22px;
+  }
+  &-line-wrap-full {
+    .@{progress-prefix-cls}-line-outer {
+      margin-right: 0;
     }
-    &-line-outer {
-        margin-right: 45px;
-        height: 22px;
-        line-height: 22px;
+  }
+  &-line-inner {
+    width: 100%;
+    background-color: #E9E9E9;
+    border-radius: 100px;
+  }
+  &-line-bg {
+    border-radius: 100px;
+    background-color: @brand-primary;
+    transition: all 0.3s linear 0s;
+    position: relative;
+  }
+  &-line-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 35px;
+    text-align: left;
+    font-size: 1em;
+    margin-left: 10px;
+    height: 22px;
+    line-height: 22px;
+    
+    > i {
+      font-size: 16px;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: .2px;
+      font-family: @progress-icon-font-family;
     }
-    &-line-wrap-full {
-        .@{progress-prefix-cls}-line-outer {
-            margin-right: 0;
-        }
-    }
-    &-line-inner {
-        display: inline-block;
-        width: 100%;
-        background-color: #E9E9E9;
-        border-radius: 100px;
-        vertical-align: middle;
-    }
-    &-line-bg {
-        border-radius: 100px;
-        background-color: @brand-primary;
-        transition: all 0.3s linear 0s;
-        position: relative;
-    }
-    &-line-text {
+  }
+  &-line-wrap.status-active {
+    .@{progress-prefix-cls}-line-bg {
+      &:before {
+        content: "";
+        opacity: 0;
         position: absolute;
-        bottom: 0;
+        top: 0;
+        left: 0;
         right: 0;
-        width: 35px;
-        text-align: left;
-        font-size: 1em;
-        margin-left: 10px;
-        height: 22px;
-        line-height: 22px;
-        
-        > i {
-            font-size: 16px;
-            font-style: normal;
-            -webkit-font-smoothing: antialiased;
-            -webkit-text-stroke-width: .2px;
-            font-family: @progress-icon-font-family;
-        }
+        bottom: 0;
+        background: #fff;
+        border-radius: 10px;
+        animation: progress-active 2s ease infinite;
+      }
     }
-    &-line-wrap.status-active {
-        .@{progress-prefix-cls}-line-bg {
-            &:before {
-                content: "";
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: #fff;
-                border-radius: 10px;
-                animation: progress-active 2s ease infinite;
-            }
-        }
+  }
+  &-line-wrap.status-exception {
+    .@{progress-prefix-cls}-line-bg {
+      background-color: @brand-danger;
     }
-    &-line-wrap.status-exception {
-        .@{progress-prefix-cls}-line-bg {
-            background-color: @brand-danger;
+    .@{progress-prefix-cls}-line-text {
+      color: @brand-danger;
+      .icon-caution {
+        &:after {
+          content: @progress-icon-caution-content;
         }
-        .@{progress-prefix-cls}-line-text {
-            color: @brand-danger;
-            .icon-caution {
-                &:after {
-                   content: @progress-icon-caution-content;
-                }
-            }
-        }
+      }
     }
-    &-line-wrap.status-success {
-        .@{progress-prefix-cls}-line-bg {
-            background-color: @brand-success;
-        }
-        .@{progress-prefix-cls}-line-text {
-            color: @brand-success;
-            .icon-success {
-                &:after {
-                    content: @progress-icon-success-content;
-                }
-            }
-        }
+  }
+  &-line-wrap.status-success {
+    .@{progress-prefix-cls}-line-bg {
+      background-color: @brand-success;
     }
+    .@{progress-prefix-cls}-line-text {
+      color: @brand-success;
+      .icon-success {
+        &:after {
+          content: @progress-icon-success-content;
+        }
+      }
+    }
+  }
 }
 
 @keyframes progress-active {
-    0% {
-        opacity: .3;
-        width: 0;
-    }
-    100% {
-        opacity: 0;
-        width: 100%;
-    }
+  0% {
+    opacity: .3;
+    width: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
  }
