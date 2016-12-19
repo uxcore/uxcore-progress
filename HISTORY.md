@@ -1,8 +1,10 @@
 # History
 
-## 1.0.4
-- `UPGRADED` to lastest scaffold
-- `FIXED` vertical align of the text with the line.
+## 1.1.2
+- `FIXED` vertical align of the text with the line. 
+
+## 1.1.0
+- `CHANGED` 1. apply new style 2. add circle progress
 
 ## 1.0.3
 - `CHANGED` update scaffold
