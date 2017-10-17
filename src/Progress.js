@@ -7,6 +7,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import assign from 'object-assign';
 
 const prefixCls = 'kuma-progress';
@@ -14,10 +15,10 @@ const prefixCls = 'kuma-progress';
 class Line extends React.Component {
   static displayName = 'Progress-Line';
   static propTypes = {
-    status: React.PropTypes.oneOf(['normal', 'exception', 'active', 'success']),
-    showInfo: React.PropTypes.bool,
-    percent: React.PropTypes.number,
-    strokeWidth: React.PropTypes.number,
+    status: PropTypes.oneOf(['normal', 'exception', 'active', 'success']),
+    showInfo: PropTypes.bool,
+    percent: PropTypes.number,
+    strokeWidth: PropTypes.number,
   }
   static defaultProps = {
     percent: 0,
