@@ -26,56 +26,56 @@ class Circle extends React.Component {
     showInfo: true,
   }
   render() {
-      const props = assign({}, this.props);
-      const strokeWidth = props.strokeWidth;
-      const radius = (50 - strokeWidth / 2);
-      const pathString = `M 50,50 m 0,-${radius}
+    const props = assign({}, this.props);
+    const strokeWidth = props.strokeWidth;
+    const radius = (50 - strokeWidth / 2);
+    const pathString = `M 50,50 m 0,-${radius}
         a ${radius},${radius} 0 1 1 0,${2 * radius}
         a ${radius},${radius} 0 1 1 0,-${2 * radius}`;
-      const len = Math.PI * 2 * radius;
-      const pathStyle = {
-        'strokeDasharray': `${len}px ${len}px`,
-        'strokeDashoffset': `${((100 - props.percent) / 100 * len)}px`,
-        'transition': 'stroke-dashoffset 0.6s ease 0s, stroke 0.6s ease',
-      };
-      
-      let progressInfo, textStyle = {
-        lineHeight: props.size + 'px'
-      };
-      
-      if (props.showInfo === true){
-        if (props.status === 'exception') {
-          progressInfo = (
-            <span style={textStyle} className={`${prefixCls}-circle-text`}>
-              <i className="icon-caution"></i>
-            </span>
-          );
-        } else if (props.status === 'success') {
-          progressInfo = (
-            <span style={textStyle} className={`${prefixCls}-circle-text`}>
-              <i className="icon-success"></i>
-            </span>
-          );
-        } else {
-          progressInfo = (
-            <span style={textStyle} className={`${prefixCls}-circle-text`}>{props.percent}%</span>
-          );
-        }
-      }
-      
-      ['strokeWidth', 'trailWidth'].forEach((item) => {
-        if (item === 'trailWidth' && !props.trailWidth && props.strokeWidth) {
-          props.trailWidth = props.strokeWidth;
-          return;
-        }
-        if (!props[item]) {
-          props[item] = defaultProps[item];
-        }
-      });
+    const len = Math.PI * 2 * radius;
+    const pathStyle = {
+      'strokeDasharray': `${len}px ${len}px`,
+      'strokeDashoffset': `${((100 - props.percent) / 100 * len)}px`,
+      'transition': 'stroke-dashoffset 0.6s ease 0s, stroke 0.6s ease',
+    };
 
-      return (
-        <div className={`kuma-progress-circle-wrap status-${props.status}`} style={{width: props.size, height: props.size}}>
-          <svg className="kuma-progress-circle" viewBox="0 0 100 100">
+    let progressInfo, textStyle = {
+      lineHeight: props.size + 'px'
+    };
+
+    if (props.showInfo === true) {
+      if (props.status === 'exception') {
+        progressInfo = (
+          <span style={textStyle} className={`${prefixCls}-circle-text`}>
+            <i className="icon-caution"></i>
+          </span>
+        );
+      } else if (props.status === 'success') {
+        progressInfo = (
+          <span style={textStyle} className={`${prefixCls}-circle-text`}>
+            <i className="icon-success"></i>
+          </span>
+        );
+      } else {
+        progressInfo = (
+          <span style={textStyle} className={`${prefixCls}-circle-text`}>{props.percent}%</span>
+        );
+      }
+    }
+
+    ['strokeWidth', 'trailWidth'].forEach((item) => {
+      if (item === 'trailWidth' && !props.trailWidth && props.strokeWidth) {
+        props.trailWidth = props.strokeWidth;
+        return;
+      }
+      if (!props[item]) {
+        props[item] = defaultProps[item];
+      }
+    });
+
+    return (
+      <div className={`kuma-progress-circle-wrap status-${props.status}`} style={{ width: props.size, height: props.size }}>
+        <svg className="kuma-progress-circle" viewBox="0 0 100 100">
           <path
             className="kuma-progress-circle-trail"
             d={pathString}
@@ -90,11 +90,11 @@ class Circle extends React.Component {
             fillOpacity="0"
             style={pathStyle}
           />
-          </svg>
-          {progressInfo}
-        </div>
-      );
-  }    
+        </svg>
+        {progressInfo}
+      </div>
+    );
+  }
 }
 
 export default Circle;
