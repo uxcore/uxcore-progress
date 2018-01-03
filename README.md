@@ -21,7 +21,7 @@
 [devdep-url]: https://david-dm.org/uxcore/uxcore-progress#info=devDependencies
 [downloads-image]: https://img.shields.io/npm/dm/uxcore-progress.svg
 [sauce-image]: https://saucelabs.com/browser-matrix/uxcore-progress.svg
-[sauce-url]: https://saucelabs.com/u/uxcore-progress
+[sauce-url]: https://saucelabs.com/u/uxcore
 
 
 #### setup develop environment
