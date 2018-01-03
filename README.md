@@ -1,10 +1,28 @@
----
+## uxcore-progress
 
-## uxcore-progress [![Dependency Status](http://img.shields.io/david/uxcore/uxcore-progress.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-progress) [![devDependency Status](http://img.shields.io/david/dev/uxcore/uxcore-progress.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-progress#info=devDependencies)
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
+[![Dependency Status][dep-image]][dep-url]
+[![devDependency Status][devdep-image]][devdep-url]
+[![NPM downloads][downloads-image]][npm-url]
 
-## TL;DR
+[![Sauce Test Status][sauce-image]][sauce-url]
 
-uxcore-progress ui component for react
+[npm-image]: http://img.shields.io/npm/v/uxcore-cascade-select.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/uxcore-cascade-select
+[travis-image]: https://img.shields.io/travis/uxcore/uxcore-cascade-select.svg?style=flat-square
+[travis-url]: https://travis-ci.org/uxcore/uxcore-cascade-select
+[coveralls-image]: https://img.shields.io/coveralls/uxcore/uxcore-cascade-select.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/uxcore/uxcore-cascade-select?branch=master
+[dep-image]: http://img.shields.io/david/uxcore/uxcore-cascade-select.svg?style=flat-square
+[dep-url]: https://david-dm.org/uxcore/uxcore-cascade-select
+[devdep-image]: http://img.shields.io/david/dev/uxcore/uxcore-cascade-select.svg?style=flat-square
+[devdep-url]: https://david-dm.org/uxcore/uxcore-cascade-select#info=devDependencies
+[downloads-image]: https://img.shields.io/npm/dm/uxcore-cascade-select.svg
+[sauce-image]: https://saucelabs.com/browser-matrix/uxcore-cascade-select.svg
+[sauce-url]: https://saucelabs.com/u/uxcore-cascade-select
+
 
 #### setup develop environment
 
@@ -12,17 +30,18 @@ uxcore-progress ui component for react
 $ git clone https://github.com/uxcore/uxcore-progress
 $ cd uxcore-progress
 $ npm install
-$ gulp server
+$ npm start
 ```
 
 ## Usage
 ```js
 import {Line, Circle} from 'uxcore-progress';
-ReactDOM.render(<Progress percent={30} />, target);
+ReactDOM.render(<Line percent={30} />, target);
+ReactDOM.render(<Circle status="active" />, target);
 ```
 
 ## demo
-http://uxcore.github.io/uxcore/components/progress/
+http://uxco.re/components/progress/
 
 ## API
 
