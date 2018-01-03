@@ -9,19 +9,19 @@
 
 [![Sauce Test Status][sauce-image]][sauce-url]
 
-[npm-image]: http://img.shields.io/npm/v/uxcore-cascade-select.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/uxcore-cascade-select
-[travis-image]: https://img.shields.io/travis/uxcore/uxcore-cascade-select.svg?style=flat-square
-[travis-url]: https://travis-ci.org/uxcore/uxcore-cascade-select
-[coveralls-image]: https://img.shields.io/coveralls/uxcore/uxcore-cascade-select.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/uxcore/uxcore-cascade-select?branch=master
-[dep-image]: http://img.shields.io/david/uxcore/uxcore-cascade-select.svg?style=flat-square
-[dep-url]: https://david-dm.org/uxcore/uxcore-cascade-select
-[devdep-image]: http://img.shields.io/david/dev/uxcore/uxcore-cascade-select.svg?style=flat-square
-[devdep-url]: https://david-dm.org/uxcore/uxcore-cascade-select#info=devDependencies
-[downloads-image]: https://img.shields.io/npm/dm/uxcore-cascade-select.svg
-[sauce-image]: https://saucelabs.com/browser-matrix/uxcore-cascade-select.svg
-[sauce-url]: https://saucelabs.com/u/uxcore-cascade-select
+[npm-image]: http://img.shields.io/npm/v/uxcore-progress.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/uxcore-progress
+[travis-image]: https://img.shields.io/travis/uxcore/uxcore-progress.svg?style=flat-square
+[travis-url]: https://travis-ci.org/uxcore/uxcore-progress
+[coveralls-image]: https://img.shields.io/coveralls/uxcore/uxcore-progress.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/uxcore/uxcore-progress?branch=master
+[dep-image]: http://img.shields.io/david/uxcore/uxcore-progress.svg?style=flat-square
+[dep-url]: https://david-dm.org/uxcore/uxcore-progress
+[devdep-image]: http://img.shields.io/david/dev/uxcore/uxcore-progress.svg?style=flat-square
+[devdep-url]: https://david-dm.org/uxcore/uxcore-progress#info=devDependencies
+[downloads-image]: https://img.shields.io/npm/dm/uxcore-progress.svg
+[sauce-image]: https://saucelabs.com/browser-matrix/uxcore-progress.svg
+[sauce-url]: https://saucelabs.com/u/uxcore-progress
 
 
 #### setup develop environment
