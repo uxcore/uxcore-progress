@@ -27,6 +27,7 @@ class Circle extends React.Component {
     let progressInfo;
     let textStyle = {
       lineHeight: `${props.size}px`,
+
     };
 
     if (props.showInfo === true) {
@@ -64,6 +65,7 @@ class Circle extends React.Component {
         className={`kuma-progress-circle-wrap status-${props.status}`}
         style={{ width: props.size, height: props.size }}
       >
+
         <svg className="kuma-progress-circle" viewBox="0 0 100 100">
           <path
             className="kuma-progress-circle-trail"

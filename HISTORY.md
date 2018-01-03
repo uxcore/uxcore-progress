@@ -1,5 +1,8 @@
 # History
 
+## 1.1.3
+-`CHANGED` adapted React 15.x
+
 ## 1.1.2
 - `FIXED` vertical align of the text with the line. 
 
