@@ -1,33 +1,11 @@
-/**
- * Progress Component for uxcore
- * @author vincent.bian
- *
- * Copyright 2014-2015, Uxcore Team, Alinw.
- * All rights reserved.
- */
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import assign from 'object-assign';
 
 const prefixCls = 'kuma-progress';
-
 class Line extends React.Component {
-  static displayName = 'Progress-Line';
-  static propTypes = {
-    status: PropTypes.oneOf(['normal', 'exception', 'active', 'success']),
-    showInfo: PropTypes.bool,
-    percent: PropTypes.number,
-    strokeWidth: PropTypes.number,
-  }
-  static defaultProps = {
-    percent: 0,
-    strokeWidth: 10,
-    status: 'normal', // exception active
-    showInfo: true
-  }
-  render(){
-    let props = assign({}, this.props);
+  render() {
+    const props = assign({}, this.props);
 
     if (parseInt(props.percent, 10) === 100) {
       props.status = 'success';
@@ -36,7 +14,7 @@ class Line extends React.Component {
     let progressInfo;
     let fullCls = '';
 
-    if(props.showInfo === true){
+    if (props.showInfo === true) {
       if (props.status === 'exception') {
         progressInfo = (
           <span className={`${prefixCls}-line-text`}>
@@ -59,8 +37,8 @@ class Line extends React.Component {
     }
 
     const percentStyle = {
-      width: props.percent + '%',
-      height: props.strokeWidth
+      width: `${props.percent}%`,
+      height: props.strokeWidth,
     };
 
     const outerStyle = {
@@ -79,5 +57,19 @@ class Line extends React.Component {
     );
   }
 }
+
+Line.displayName = 'Progress-Line';
+Line.propTypes = {
+  status: PropTypes.oneOf(['normal', 'exception', 'active', 'success']),
+  showInfo: PropTypes.bool,
+  percent: PropTypes.number,
+  strokeWidth: PropTypes.number,
+};
+Line.defaultProps = {
+  percent: 0,
+  strokeWidth: 10,
+  status: 'normal', // exception active
+  showInfo: true,
+};
 
 export default Line;

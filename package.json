@@ -31,6 +31,7 @@
   "Progress"
  ],
  "devDependencies": {
+  "babel-eslint": "^8.1.2",
   "console-polyfill": "^0.2.2",
   "enzyme": "^3.0.0",
   "enzyme-adapter-react-15": "^1.0.0",

@@ -6,7 +6,7 @@
  * All rights reserved.
  */
 
-let Progress = require('./Progress');
+const Progress = require('./Progress');
 Progress.Line = Progress;
 Progress.Circle = require('./Circle');
 
