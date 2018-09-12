@@ -7,6 +7,7 @@
  */
 
 const Progress = require('./Progress');
+
 Progress.Line = Progress;
 Progress.Circle = require('./Circle');
 
