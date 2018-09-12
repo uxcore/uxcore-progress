@@ -1,5 +1,8 @@
 # History
 
+## 1.3.0
+- `CHANGED` support js style export
+
 ## 1.1.3
 -`CHANGED` adapted React 15.x
 
