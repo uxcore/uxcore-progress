@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import assign from 'object-assign';
 
-const prefixCls = 'kuma-progress';
 class Line extends React.Component {
+  
   render() {
     const props = assign({}, this.props);
+    const prefixCls = props.prefixCls;
 
     if (parseInt(props.percent, 10) === 100) {
       props.status = 'success';
@@ -60,12 +61,14 @@ class Line extends React.Component {
 
 Line.displayName = 'Progress-Line';
 Line.propTypes = {
+  prefixCls: PropTypes.string,
   status: PropTypes.oneOf(['normal', 'exception', 'active', 'success']),
   showInfo: PropTypes.bool,
   percent: PropTypes.number,
   strokeWidth: PropTypes.number,
 };
 Line.defaultProps = {
+  prefixCls: 'kuma-progress',
   percent: 0,
   strokeWidth: 10,
   status: 'normal', // exception active

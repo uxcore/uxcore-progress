@@ -6,12 +6,12 @@ const defaultProps = {
   strokeWidth: 1,
   trailWidth: 1,
 };
-const prefixCls = 'kuma-progress';
 
 class Circle extends React.Component {
 
   render() {
     const props = assign({}, this.props);
+    const prefixCls = props.prefixCls;
     const strokeWidth = props.strokeWidth;
     const radius = (50 - strokeWidth / 2);
     const pathString = `M 50,50 m 0,-${radius}
@@ -90,6 +90,7 @@ class Circle extends React.Component {
 
 Circle.displayName = 'Progress-Circle';
 Circle.propTypes = {
+  prefixCls: PropTypes.string,
   status: PropTypes.oneOf(['normal', 'exception', 'success']),
   percent: PropTypes.number,
   strokeWidth: PropTypes.number,
@@ -97,6 +98,7 @@ Circle.propTypes = {
   showInfo: PropTypes.bool,
 };
 Circle.defaultProps = {
+  prefixCls: 'kuma-progress',
   status: 'normal', // exception active
   percent: 0,
   strokeWidth: 6,
