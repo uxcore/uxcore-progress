@@ -1,5 +1,8 @@
 # History
 
+## 1.3.1
+- `FIXED` lost variable in less
+
 ## 1.3.0
 - `CHANGED` support js style export
 
