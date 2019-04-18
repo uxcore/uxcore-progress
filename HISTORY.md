@@ -1,4 +1,7 @@
 # History
+## 1.3.3
+- `NEW` add new prop infoType (icon|percent)
+- `FIXED` fix state icon lost when success & exception in circle progress
 
 ## 1.3.1
 - `FIXED` lost variable in less
@@ -10,7 +13,7 @@
 -`CHANGED` adapted React 15.x
 
 ## 1.1.2
-- `FIXED` vertical align of the text with the line. 
+- `FIXED` vertical align of the text with the line.
 
 ## 1.1.0
 - `CHANGED` 1. apply new style 2. add circle progress
