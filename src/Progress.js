@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import assign from 'object-assign';
 
 class Line extends React.Component {
-  
+
   render() {
     const props = assign({}, this.props);
     const prefixCls = props.prefixCls;
@@ -16,16 +16,17 @@ class Line extends React.Component {
     let fullCls = '';
 
     if (props.showInfo === true) {
+      const type = props.infoType
       if (props.status === 'exception') {
         progressInfo = (
           <span className={`${prefixCls}-line-text`}>
-            <i className="icon-caution"></i>
+            {type === 'icon' ? <i className="icon-caution" /> : type === 'percent' ? `${props.percent}%` : 'Error'}
           </span>
         );
       } else if (props.status === 'success') {
         progressInfo = (
           <span className={`${prefixCls}-line-text`}>
-            <i className="icon-success"></i>
+            {type === 'icon' ? <i className="icon-success" /> : type === 'percent' ? `${props.percent}%` : 'Success'}
           </span>
         );
       } else {
@@ -66,6 +67,7 @@ Line.propTypes = {
   showInfo: PropTypes.bool,
   percent: PropTypes.number,
   strokeWidth: PropTypes.number,
+  infoType: PropTypes.string
 };
 Line.defaultProps = {
   prefixCls: 'kuma-progress',
@@ -73,6 +75,7 @@ Line.defaultProps = {
   strokeWidth: 10,
   status: 'normal', // exception active
   showInfo: true,
+  infoType: 'icon'
 };
 
 export default Line;

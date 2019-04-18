@@ -31,16 +31,17 @@ class Circle extends React.Component {
     };
 
     if (props.showInfo === true) {
+      const type = props.infoType
       if (props.status === 'exception') {
         progressInfo = (
           <span style={textStyle} className={`${prefixCls}-circle-text`}>
-            <i className="icon-caution"></i>
+            {type === 'icon' ? <i className="icon-caution" /> : type === 'percent' ? `${props.percent}%` : 'Error'}
           </span>
           );
       } else if (props.status === 'success') {
         progressInfo = (
           <span style={textStyle} className={`${prefixCls}-circle-text`}>
-            <i className="icon-success"></i>
+            {type === 'icon' ? <i className="icon-success" /> : type === 'percent' ? `${props.percent}%` : 'Success'}
           </span>
           );
       } else {
@@ -96,6 +97,7 @@ Circle.propTypes = {
   strokeWidth: PropTypes.number,
   size: PropTypes.number,
   showInfo: PropTypes.bool,
+  infoType: PropTypes.string
 };
 Circle.defaultProps = {
   prefixCls: 'kuma-progress',
@@ -104,6 +106,7 @@ Circle.defaultProps = {
   strokeWidth: 6,
   size: 156,
   showInfo: true,
+  infoType: 'icon'
 };
 
 export default Circle;

@@ -43,7 +43,7 @@ class Demo extends React.Component {
                     <Line percent={100} />
                     <Line percent={50} showInfo={false} />
                     <Circle percent={30} />
-                    <Circle percent={70} status="exception" />
+                    <Circle percent={70} status="exception" infoType={'percent'} />
                     <Circle percent={100} status="success" />
                     <Circle percent={50} showInfo={false} />
                 </div>
